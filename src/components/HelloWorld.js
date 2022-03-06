@@ -4,7 +4,7 @@ class HelloWorld extends React.Component {
    render() {
       return (
          <div>
-            <h1>Hello World!</h1>
+            <h1>Wegdam-media Web App!</h1>
          </div>
       );
    }
