@@ -5,25 +5,24 @@ class Greet extends React.Component {
 	constructor(props){
 		super(props);
 		
-		this.state = {val: "awesome"};
+		this.state = {val: "de Web App"};
 	}
 	
 	
 	changeValue = () => {
 		this.setState(
-			{val: "Happy"}
+			{val: "Wegdam Media"}
 			);
 		}
 	
 	render(){
 		return(
 			<div>
-				<h1>Hello {this.state.val} World</h1>
-				<button type="button" onClick={this.changeValue}>Change value</button>
+				<h1>Welkom bij {this.state.val}</h1>
+				<button type="button" onClick={this.changeValue}>Klik hier</button>
 			</div>
 		);
 	}
 }
-
 
 export default Greet;
