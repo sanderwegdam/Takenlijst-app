@@ -4,25 +4,18 @@ import './media.css';
 
 class Menu extends React.Component {
 	constructor(props){
-		super(props);
-		
+		super(props);		
 		this.state = {};
 	}
 	
 	render(){
 		
-		const menu = this.props.places.map((place) => {
+		const Menu = this.props.teksten.map((teksten) => {
 			return(
-				<div key={place.id} id="unit" className="col-12 mt-5">					
+				<div key={teksten.id} id="unit" className="col-12 mt-5">					
 					<Media tag="li">
 						<Media left>
-							<Media object src={place.image} alt={place.name} />
-						</Media>
-						<Media body className="ml-3">
-							<Media heading><strong>{place.name}</strong></Media>
-							<div><strong>Location Type - </strong>{place.category}</div>
-							<div><strong>Info - </strong>{place.description}</div>
-							<div>Info source - {place.source}</div>
+							<Media object src={teksten.afbeelding} alt={teksten.naam} />
 						</Media>
 					</Media>
 				</div>
@@ -33,15 +26,12 @@ class Menu extends React.Component {
 			<div className="container">
 				<div className="row">
 					<Media list>
-						{menu}
+						{Menu}
 					</Media>
 				</div>
 			</div>
 		);
 	}
 }
-
-// 'Keys' - It helps identify which items have changed, are added or removed.
-
 
 export default Menu;
