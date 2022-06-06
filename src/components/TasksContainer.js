@@ -64,8 +64,6 @@ const TasksContainer = () => {
   return (   
     <>
       <Navbar />
-      <Switch>
-        <Route exact path="/">
           <div className="container">
             <div className="inner">  
               <AddTask addTodoProps={addTodoItem} />
@@ -77,11 +75,6 @@ const TasksContainer = () => {
               />
             </div>
           </div>
-        </Route>
-        <Route path="*">
-          <GeenPagina />
-        </Route>
-      </Switch>
     <Footer />
     </>
   );
