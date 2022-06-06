@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react"
-import { Route, Switch } from "react-router-dom"
 import Footer from "./pages/Footer"
 import AddTask from "./AddTask"
 import TasksList from "./Taskslist"
 import { v4 as uuidv4 } from "uuid"
-import GeenPagina from "./pages/GeenPagina"
 import Navbar from "./Navbar";
 
 const TasksContainer = () => {
