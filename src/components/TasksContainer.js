@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Footer from "./pages/Footer"
+import Footer from "./Footer"
 import AddTask from "./AddTask"
 import TasksList from "./Taskslist"
 import { v4 as uuidv4 } from "uuid"
