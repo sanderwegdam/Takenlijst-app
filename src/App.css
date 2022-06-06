@@ -111,7 +111,6 @@ a {
   padding: 10px 40px;
   text-decoration: none;
   color: gray;
-  text-transform: uppercase;
   font-weight: bold;
   outline: none;
 }
@@ -156,4 +155,45 @@ a {
 
 .main__content p {
   line-height: 25px;
+}
+
+.btn {
+  display: inline-block;
+  color: black;
+  border: none;
+  padding: 0px 13px;
+  margin: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.item {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 30px 20px;
+  cursor: pointer;
+  list-style-type: none;
+  
+}
+
+.item button {
+  font-size: 13px;
+  background: #f1f3f4;
+  border: none;
+  cursor: pointer;
+  float: right;
+  outline: none;
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  margin: -10px 0 0 10px;
+}
+
+.textInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
 }

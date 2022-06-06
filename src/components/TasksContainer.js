@@ -1,36 +1,22 @@
 import React, { useState, useEffect } from "react"
 import { Route, Switch } from "react-router-dom"
-import Header from "./Header"
-import Footer from "./Footer"
-import InputTodo from "./InputTodo"
-import TodosList from "./TodosList";
-import { v4 as uuidv4 } from "uuid";
-import About from "../pages/About"
-import GeenPagina from "../pages/GeenPagina"
+import Footer from "./pages/Footer"
+import AddTask from "./AddTask"
+import TasksList from "./Taskslist"
+import { v4 as uuidv4 } from "uuid"
+import GeenPagina from "./pages/GeenPagina"
 import Navbar from "./Navbar";
 
-const TodoContainer = () => {
+const TasksContainer = () => {
 
   const [todos, setTodos] = useState(getInitialTodos())
 
-  // useEffect(() => {
-  //   // getting stored items
-  //   const temp = localStorage.getItem("todos")
-  //   const loadedTodos = JSON.parse(temp)
-
-  //   if (loadedTodos) {
-  //     setTodos(loadedTodos)
-  //   }
-  // }, [])
-
   useEffect(() => {
-    // storing todos items
     const temp = JSON.stringify(todos)
     localStorage.setItem("todos", temp)
   }, [todos])
 
   function getInitialTodos() {
-    // getting stored items
     const temp = localStorage.getItem("todos")
     const savedTodos = JSON.parse(temp)
     return savedTodos || [] 
@@ -81,10 +67,9 @@ const TodoContainer = () => {
       <Switch>
         <Route exact path="/">
           <div className="container">
-            <div className="inner">
-              <Header />
-              <InputTodo addTodoProps={addTodoItem} />
-              <TodosList 
+            <div className="inner">  
+              <AddTask addTodoProps={addTodoItem} />
+              <TasksList 
                 todos={todos} 
                 handleChangeProps={handleChange} 
                 deleteTodoProps={delTodo}
@@ -92,9 +77,6 @@ const TodoContainer = () => {
               />
             </div>
           </div>
-        </Route>
-        <Route path= "/about">
-          <About />
         </Route>
         <Route path="*">
           <GeenPagina />
@@ -105,4 +87,4 @@ const TodoContainer = () => {
   );
 }
 
-export default TodoContainer
+export default TasksContainer

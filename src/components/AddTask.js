@@ -1,7 +1,8 @@
 import React, { useState } from "react"
-import { FaPlusCircle } from "react-icons/fa";
+import Button  from './Button'
 
-const InputTodo = (props) => {
+
+const AddTask = (props, showAdd) => {
   const [inputText, setInputText] = useState({
     title: "",
   })
@@ -21,18 +22,17 @@ const InputTodo = (props) => {
         title: "",
       })
     } else {
-      alert("Voer een taak in")
+      alert("Voer eerst een taak in")
     } 
   };
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
-      <input type="text" className="input-text" placeholder="Voeg een taak toe" value={inputText.title} name="title" onChange={onChange} />
-      <button className="input-submit">
-        <FaPlusCircle style={{ color: "black", fontSize: "12px", marginTop: "2px" }}/>
-      </button>
-    </form>
+      <input type="text" className="input-text" style={{ fontSize: "14px", height: "50px", fontWeight: "400", lineHeight: "1em", color: "#000" }} placeholder="Voeg een taak toe" value={inputText.title} name="title" onChange={onChange} />
+      <Button  color={'white'} className="btn"/>     
+      </form>
   )
 }
 
-export default InputTodo
+
+export default AddTask
