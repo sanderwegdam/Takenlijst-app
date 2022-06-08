@@ -176,12 +176,16 @@ a {
   padding: 30px 20px;
   cursor: pointer;
   list-style-type: none;   
+  display: flex;
+  align-items: center;
 }
 
 .item button {
   font-size: 13px;
+  color: gray;
   background: #f1f3f4;
   border: none;
+  font-weight: bold;
   cursor: pointer;
   float: right;
   outline: none;

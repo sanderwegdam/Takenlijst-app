@@ -51,7 +51,7 @@ const Tasks = (props) => {
       <input type="text" style={editMode} className="textInput" value={title} onChange={(e)=> {props.setUpdate(e.target.value, id)}}
         onKeyDown={handleUpdatedDone}
       />
-         <button style={editMode} onClick={handleUpdatedButton}>Wijzig</button>   
+      <button style={editMode} className="item-button" onClick={handleUpdatedButton}>Wijzig</button>   
     </li>
   )
 }
