@@ -175,8 +175,7 @@ a {
   margin: 5px;
   padding: 30px 20px;
   cursor: pointer;
-  list-style-type: none;
-  
+  list-style-type: none;   
 }
 
 .item button {
@@ -193,7 +192,7 @@ a {
 }
 
 .textInput {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border: 1px solid #dfdfdf;
 }

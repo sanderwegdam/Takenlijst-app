@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import ".././App.css"
 import { FaTimes } from "react-icons/fa";
+import { TiEdit } from 'react-icons/ti';
 
 const Tasks = (props) => {
   const [editing, setEditing] = useState(false)
@@ -16,10 +17,14 @@ const Tasks = (props) => {
   } 
 
   const handleUpdatedDone = (event) => {
-    if (event.key === "Enter" ) {
+    if (event.key === "Enter") {
       setEditing(false)
-    }
+    } 
   }
+  
+  const handleUpdatedButton = () => {
+      setEditing(false)
+  } 
 
   const { id, title } = props.todo
   
@@ -38,11 +43,15 @@ const Tasks = (props) => {
         <button onClick={() => props.deleteTodoProps(id)}>
           <FaTimes style={{ color: "red", fontSize: "16px"}} />
         </button>
+          <button>
+        <TiEdit style={{ color: "gray", fontSize: "16px"}} onClick={handleEditing} className='edit-icon' />
+        </button>        
         <span>{title}</span>
       </div>
       <input type="text" style={editMode} className="textInput" value={title} onChange={(e)=> {props.setUpdate(e.target.value, id)}}
         onKeyDown={handleUpdatedDone}
       />
+         <button style={editMode} onClick={handleUpdatedButton}>Wijzig</button>   
     </li>
   )
 }
