@@ -14,20 +14,20 @@ const Tasks = (props) => {
 
   const handleEditing = () => {
     setEditing(true)
-  } 
+  }
 
   const handleUpdatedDone = (event) => {
     if (event.key === "Enter") {
       setEditing(false)
-    } 
+    }
   }
-  
+
   const handleUpdatedButton = () => {
-      setEditing(false)
-  } 
+    setEditing(false)
+  }
 
   const { id, title } = props.todo
-  
+
   let viewMode = {};
   let editMode = {};
 
@@ -41,17 +41,17 @@ const Tasks = (props) => {
     <li className="item">
       <div onDoubleClick={handleEditing} style={viewMode}>
         <button onClick={() => props.deleteTodoProps(id)}>
-          <FaTimes style={{ color: "red", fontSize: "16px"}} />
+          <FaTimes style={{ color: "red", fontSize: "16px" }} />
         </button>
-          <button>
-        <TiEdit style={{ color: "gray", fontSize: "16px"}} onClick={handleEditing} className='edit-icon' />
-        </button>        
+        <button>
+          <TiEdit style={{ color: "gray", fontSize: "16px" }} onClick={handleEditing} className='edit-icon' />
+        </button>
         <span>{title}</span>
       </div>
-      <input type="text" style={editMode} className="textInput" value={title} onChange={(e)=> {props.setUpdate(e.target.value, id)}}
+      <input type="text" style={editMode} className="textInput" value={title} onChange={(e) => { props.setUpdate(e.target.value, id) }}
         onKeyDown={handleUpdatedDone}
       />
-      <button style={editMode} className="item-button" onClick={handleUpdatedButton}>Wijzig</button>   
+      <button style={editMode} className="item-button" onClick={handleUpdatedButton}>Wijzig</button>
     </li>
   )
 }

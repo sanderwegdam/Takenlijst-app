@@ -16,9 +16,9 @@ const TasksContainer = () => {
   function getInitialTodos() {
     const temp = localStorage.getItem("todos")
     const savedTodos = JSON.parse(temp)
-    return savedTodos || [] 
+    return savedTodos || []
   }
- 
+
   const handleChange = id => {
     setTodos(prevState => prevState.map((todo) => {
       if (todo.id === id) {
@@ -39,10 +39,10 @@ const TasksContainer = () => {
   };
 
   const addTodoItem = title => {
-    const newTodo = {    
-      id: uuidv4(),    
-      title: title,    
-      completed: false  
+    const newTodo = {
+      id: uuidv4(),
+      title: title,
+      completed: false
     };
     setTodos([...todos, newTodo])
   };
@@ -58,20 +58,20 @@ const TasksContainer = () => {
     )
   }
 
-  return (   
+  return (
     <>
       <Navbar />
-          <div className="container">
-            <div className="inner">  
-              <AddTask addTodoProps={addTodoItem} />
-              <TasksList 
-                todos={todos} 
-                handleChangeProps={handleChange} 
-                deleteTodoProps={delTodo}
-                setUpdate ={setUpdate} 
-              />
-            </div>
-          </div>
+      <div className="container">
+        <div className="inner">
+          <AddTask addTodoProps={addTodoItem} />
+          <TasksList
+            todos={todos}
+            handleChangeProps={handleChange}
+            deleteTodoProps={delTodo}
+            setUpdate={setUpdate}
+          />
+        </div>
+      </div>
     </>
   );
 }
