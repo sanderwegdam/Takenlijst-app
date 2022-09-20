@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/takenlijst-app/static/css/main.b50b1a06.chunk.css",
+    "main.css": "/takenlijst-app/static/css/main.7b6d788c.chunk.css",
     "main.js": "/takenlijst-app/static/js/main.426e591b.chunk.js",
     "main.js.map": "/takenlijst-app/static/js/main.426e591b.chunk.js.map",
     "runtime-main.js": "/takenlijst-app/static/js/runtime-main.0032157d.js",
@@ -8,13 +8,13 @@
     "static/js/2.8ef6ca1a.chunk.js": "/takenlijst-app/static/js/2.8ef6ca1a.chunk.js",
     "static/js/2.8ef6ca1a.chunk.js.map": "/takenlijst-app/static/js/2.8ef6ca1a.chunk.js.map",
     "index.html": "/takenlijst-app/index.html",
-    "static/css/main.b50b1a06.chunk.css.map": "/takenlijst-app/static/css/main.b50b1a06.chunk.css.map",
+    "static/css/main.7b6d788c.chunk.css.map": "/takenlijst-app/static/css/main.7b6d788c.chunk.css.map",
     "static/js/2.8ef6ca1a.chunk.js.LICENSE.txt": "/takenlijst-app/static/js/2.8ef6ca1a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0032157d.js",
     "static/js/2.8ef6ca1a.chunk.js",
-    "static/css/main.b50b1a06.chunk.css",
+    "static/css/main.7b6d788c.chunk.css",
     "static/js/main.426e591b.chunk.js"
   ]
 }
